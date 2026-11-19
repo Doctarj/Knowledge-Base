@@ -1,0 +1,21 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "22.16.0",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.24.0"
+    },
+    "version": "1.20.0",
+    "libraryName": "kbv-2",
+    "libraryId": "7ae43e5d-418c-4099-a150-0a6289c8beaf",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "kbv2 ",
+    "solutionShortDescription": "kbv2  description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

@@ -1,0 +1,1380 @@
+{
+ "name": "The Reserve Club",
+ "children": [
+  {
+   "type": "folder",
+   "name": "Applications",
+   "children": [
+    {
+     "type": "file",
+     "name": "Reserve Club Application",
+     "blocks": [
+      {
+       "type": "sub",
+       "text": "Northstar"
+      },
+      {
+       "type": "p",
+       "text": "The Reserve Club uses Northstar for their POS systems in their Proshop, Lakehouse, and Dining Room. The Reserve Club should try to contact Northstar for support, but there are a few issues that can be dealt with remotely:"
+      },
+      {
+       "type": "p",
+       "text": "Common Issues"
+      },
+      {
+       "type": "indent",
+       "text": "POS link doesn’t work/redirects to the wrong POS: Clear the cache/cookies, ensure\nthe POS link points to the proper POS link from Northstar\nPOS prints to the same printer: Check to see the POS link points to the right POS\n(example: bix2019cold3, bix2019hot1)"
+      },
+      {
+       "type": "p",
+       "text": "Ring Central\nThe club uses RingCentral, and the software is RingCentral; any questions/issues should be forwarded to Artem."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "folder",
+   "name": "General",
+   "children": [
+    {
+     "type": "folder",
+     "name": "Guides",
+     "children": [
+      {
+       "type": "files",
+       "tabs": [
+        {
+         "tab": "Information",
+         "blocks": [
+          {
+           "type": "p",
+           "text": "49-400 Desert Butte Trail, Indian Wells, CA 92210\nMain Desk: (760)674-2274"
+          },
+          {
+           "type": "p",
+           "text": "Hours:"
+          },
+          {
+           "type": "p",
+           "text": "Weekdays: 8:30 a.m.to 5:00 p.m."
+          },
+          {
+           "type": "p",
+           "text": "Actual operating hours may vary; call ahead of timeframe"
+          },
+          {
+           "type": "sub",
+           "text": "Contacts"
+          },
+          {
+           "type": "p",
+           "text": "Jeff Buck (CFO) – Contact him for any on-site visits"
+          },
+          {
+           "type": "p",
+           "text": "jbuck@thereserveclub.com"
+          },
+          {
+           "type": "p",
+           "text": "Mike Kelly (GM)"
+          },
+          {
+           "type": "p",
+           "text": "mkelly@thereserveclub.com"
+          },
+          {
+           "type": "p",
+           "text": "Alan Stessy (Superintendent)"
+          },
+          {
+           "type": "p",
+           "text": "astessy@thereserveclub.com"
+          },
+          {
+           "type": "p",
+           "text": "Escalation Contacts:"
+          },
+          {
+           "type": "list",
+           "items": [
+            "General ticket escalation: Dan LeClerc/Kanstantstin Famin",
+            "Hardware procurement (cameras, equipment, switches, etc.): Yuri Chervinsky",
+            "Advanced network functions: Konstantin Kopylov (K2)",
+            "Phone systems: Artem Musalov",
+            "Servers: Stanislav Alekseichyk"
+           ]
+          },
+          {
+           "type": "p",
+           "text": "Please reach out to Jeff if any on-site visits are required, and that. Also have any third-party companies speak to Jeff as well (CC in emails etc.) Jeff just needs to be kept aware of any onsite visits. No follow-up or additional action is needed from him."
+          }
+         ]
+        },
+        {
+         "tab": "Network Drives",
+         "blocks": [
+          {
+           "type": "table",
+           "rows": [
+            [
+             "Network Drive",
+             "Group",
+             "Path"
+            ],
+            [
+             "Shared",
+             "No GPO",
+             "\\\\RESFILES\\Public"
+            ]
+           ]
+          },
+          {
+           "type": "sub",
+           "text": "How to Map Drives to a User’s PC"
+          },
+          {
+           "type": "step",
+           "num": 1,
+           "text": "Add the User to the relevant Group based on the request."
+          },
+          {
+           "type": "step",
+           "num": 2,
+           "text": "If the Drive does not automatically show up, open File Explorer"
+          },
+          {
+           "type": "step",
+           "num": 3,
+           "text": "Right-click “This PC” then “Map Network Drive”"
+          },
+          {
+           "type": "step",
+           "num": 4,
+           "text": "Choose the proper Drive Letter based on the table above, and add the path based on the path listed in the table"
+          },
+          {
+           "type": "step",
+           "num": 5,
+           "text": "Make sure “Reconnect at sign-in” is enabled"
+          }
+         ]
+        },
+        {
+         "tab": "New User setup",
+         "blocks": [
+          {
+           "type": "sub",
+           "text": "Onboarding Process - Active Directory"
+          },
+          {
+           "type": "p",
+           "text": "Have the hiring manager/original ticket creator fill in the New User Request Form."
+          },
+          {
+           "type": "p",
+           "text": "Make sure that the user provides as much detail as possible. This includes any other third-party applications, distribution lists, security groups, etc."
+          },
+          {
+           "type": "p",
+           "text": "Determine if the user is created in Admin 365 or in Active Directory. If the user is created in AD always perform changes on AD even if the same options exist in Admin 365 (example: resetting passwords)."
+          },
+          {
+           "type": "p",
+           "text": "Create the new user in the proper folder (this can either be a general “Users” folder or a folder specifically for their department)."
+          },
+          {
+           "type": "p",
+           "text": "For the reserve club, the name format is:"
+          },
+          {
+           "type": "indent",
+           "text": "[first initial].[last name]@the reserveclub.com\nJohn Doe → john.doe@the reserveclub.com"
+          },
+          {
+           "type": "p",
+           "text": "If applicable, you can use a departing user as a template for the new user (ask the ticket creator beforehand). Add the user’s job title in “Description” if other users in the company have their job title listed as well."
+          },
+          {
+           "type": "p",
+           "text": "When creating a user, make sure to use the @thereserveclub.com email, never .local unless stated otherwise. In “Attributes”, under proxyaddress, add the user’s new email address:"
+          },
+          {
+           "type": "indent",
+           "text": "Example: SMTP:john.doe@thereserveclub"
+          },
+          {
+           "type": "p",
+           "text": "Add the new user into the relevant share folders and security groups that the ticket creator did not add in the New User Request Form. Use the DeltaSync file located in the Desktop to push the newly created user."
+          },
+          {
+           "type": "p",
+           "text": "Make sure to use the Secret Sharing system from Club Support when sending passwords!"
+          },
+          {
+           "type": "p",
+           "text": "https://csms.clubsupportinc.com/secrets"
+          },
+          {
+           "type": "sub",
+           "text": "Onboarding Process - Microsoft 365"
+          },
+          {
+           "type": "p",
+           "text": "Log in to Microsoft 365 with the csupport@thereserveclub.com account."
+          },
+          {
+           "type": "p",
+           "text": "Find the newly created user and under Licenses, grant the license (if any) requested by the ticket creator, which should be outlined in the New User Request Form. If a license is required, send an email to “Licenses@clubsupportinc.com” under this format:\n\n Subject: Add (1/2/etc.) license to the reserve club"
+          },
+          {
+           "type": "indent",
+           "text": "Body:\n\nLicense is for:\n\nUser Requesting License (username@thereserveclub.com)\nExchange Online/Business Standard Monthly/monthly Commit\nRequested by:\nManager/Controller\t\tTicket No."
+          },
+          {
+           "type": "p",
+           "text": "Depending on the club, mailbox delegation, distribution lists, and other 365-exclusive groups should also be assigned in Exchange. To do so, go to “Exchange”, then depending on the mailbox, grant the proper permissions. For example, if you want to delegate the shared mailbox “Catering” to the user, go to the catering mailbox, and add the new user under the “Read and Manage” permissions."
+          },
+          {
+           "type": "p",
+           "text": "Outlook usually adds the inbox to the user’s mailbox automatically, but if this doesn’t occur, you can add the mailbox manually in Outlook. To do this, right-click the account name in the left folder pane, select Add shared folder or mailbox, enter the mailbox address."
+          }
+         ]
+        },
+        {
+         "tab": "User disable",
+         "blocks": [
+          {
+           "type": "sub",
+           "text": "Offboarding Process - Active Directory"
+          },
+          {
+           "type": "p",
+           "text": "Club Support Policy dictates that we rarely, if ever delete accounts in systems once created. Permissions and security group memberships in AD are generally left intact."
+          },
+          {
+           "type": "p",
+           "text": "Reset the password to ensure that the user cannot sign-in with their previous credentials. Afterwards, right click the user to be offboarded, and press “Disable” if requested. If any changes are done, make sure to run the DeltaSync script on the desktop."
+          },
+          {
+           "type": "sub",
+           "text": "Offboarding Process - Microsoft 365"
+          },
+          {
+           "type": "p",
+           "text": "The offboarding process differs from club to club, so double check the ticket as the creator will usually include what needs to be taken off and what needs to be retained"
+          },
+          {
+           "type": "p",
+           "text": "Log in to the 365 portal with csupport@countryhills.ab.ca and find the user to be offboarded. To disallow the user from signing back in, press both “Block Sign-in” and “Sign Out Of All Sessions” to remove the user."
+          },
+          {
+           "type": "p",
+           "text": "To unlicense a user, go to “Licenses” and remove their Microsoft 365 Basic/Standard license to remove their Outlook and Word license. If the license isn’t immediately being transferred to another user, you can remove the license by emailing Licenses@clubsupportinc.com"
+          },
+          {
+           "type": "indent",
+           "text": "Subject: Remove (1/2/etc.) license in The Reserve Club\nBody:\n\nLicense is for:\n\nDeparting User (username@thereserveclub.com)\nExchange Online/Business Standard Monthly/monthly Commit\nRequested by:\nManager/Controller\t\tTicket No."
+          },
+          {
+           "type": "p",
+           "text": "In Exchange, go to the user to be offboarded, and convert their mailbox into a shared mailbox. If Read Access, Send, or Send As access is requested by the ticket creator, this is also done in Exchange. Email forwarding is also done in Exchange if requested by the ticket creator."
+          }
+         ]
+        },
+        {
+         "tab": "Proper Server Shutdown and Startup Procedure",
+         "blocks": [
+          {
+           "type": "p",
+           "text": "Consult with Yurii/Stan and any managers before doing any server shutdowns and startups. They are in charge of the regularly scheduled server reboots for most of the clubs. If they are unavailable, contact Kosta as we do not reboot servers without prior consent. If a shutdown is required, here is a general guideline to maintain connectivity:"
+          },
+          {
+           "type": "step",
+           "num": 1,
+           "text": "Notify users and departments of the downtime and provide an accurate timeframe on when services can be fully up and running again."
+          },
+          {
+           "type": "step",
+           "num": 2,
+           "text": "Schedule the downtime after hours (Usually 10:00 PM to 4:00 AM local time) to prevent any issues in the future."
+          },
+          {
+           "type": "step",
+           "num": 3,
+           "text": "Shutdown and/or restart the servers as required and log everything that occurs."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "file",
+     "name": "Printers",
+     "blocks": [
+      {
+       "type": "p",
+       "text": "Regular Printers (\\\\resfiles):"
+      },
+      {
+       "type": "table",
+       "rows": [
+        [
+         "IP",
+         "Username",
+         "Password",
+         "Location",
+         "Type",
+         "Printer name"
+        ],
+        [
+         "192.168.0.25",
+         "admin",
+         "",
+         "Pro Shop Office",
+         "Network",
+         ""
+        ],
+        [
+         "192.168.0.132",
+         "admin",
+         "",
+         "Accounting",
+         "Network",
+         ""
+        ],
+        [
+         "192.168.0.102",
+         "admin",
+         "",
+         "Nicoles Office",
+         "Network",
+         ""
+        ],
+        [
+         "192.168.0.123",
+         "admin",
+         "",
+         "Fitness Front desk",
+         "Network",
+         ""
+        ],
+        [
+         "192.168.0.170",
+         "admin",
+         "",
+         "Fitness OFfice",
+         "Network",
+         ""
+        ],
+        [
+         "192.168.0.18",
+         "admin",
+         "admin",
+         "Admin Office",
+         "Network",
+         ""
+        ],
+        [
+         "192.168.0.101",
+         "admin",
+         "",
+         "Greens Office",
+         "Network",
+         ""
+        ],
+        [
+         "192.168.0.19",
+         "admin",
+         "",
+         "Hailey's Office",
+         "Network",
+         ""
+        ],
+        [
+         "",
+         "admin",
+         "",
+         "",
+         "Network",
+         ""
+        ],
+        [
+         "",
+         "admin",
+         "",
+         "",
+         "Network",
+         ""
+        ]
+       ]
+      },
+      {
+       "type": "sub",
+       "text": "Installing Printers on workstations"
+      },
+      {
+       "type": "step",
+       "num": 1,
+       "text": "Find the name of the printer to be installed in the \\\\resfiles"
+      },
+      {
+       "type": "step",
+       "num": 2,
+       "text": "Make sure that the user has the relevant group membership for the printer to be used (Administration, Fitness, etc.)."
+      },
+      {
+       "type": "step",
+       "num": 3,
+       "text": "In File Explorer, put \\\\resfiles into the File Explorer and this should bring up a list of all printers that are available to the user account."
+      },
+      {
+       "type": "step",
+       "num": 4,
+       "text": "Find the printer to be installed and double-click it to automatically install the printer drivers."
+      },
+      {
+       "type": "step",
+       "num": 5,
+       "text": "Send a test print to the printer in Settings to verify its connectivity."
+      }
+     ]
+    },
+    {
+     "type": "file",
+     "name": "Current Devices List",
+     "blocks": [
+      {
+       "type": "sub",
+       "text": "Workstations + Devices"
+      },
+      {
+       "type": "sub",
+       "text": "Club House"
+      },
+      {
+       "type": "table",
+       "rows": [
+        [
+         "",
+         "Computer Name",
+         "Primary User",
+         "User Password",
+         "Serial Number",
+         "Make",
+         "Warranty",
+         "Jonas ID",
+         "Monitor 1",
+         "Monitor 2",
+         "Local Printer (USB)",
+         "Notes"
+        ],
+        [
+         "",
+         "Desk-Dan23",
+         "Jeff Buck (controller)",
+         "unknown",
+         "MJ0GABR1",
+         "Lenovo",
+         "Out Of Warranty",
+         "",
+         "Dell S2725DS",
+         "Dell S2725DS",
+         "Brother MFC-L8905CDW",
+         "3rd Monitor: Samsung S34C502GAN, Win11"
+        ],
+        [
+         "",
+         "Res-Admin25",
+         "Brigitte Schneider",
+         "unknown",
+         "8PM6V94",
+         "Dell Pro Slim QCS1250",
+         "Basic - ends 07/02/2028",
+         "",
+         "Dell P2422H",
+         "None",
+         "Network Printer",
+         "Win 11"
+        ],
+        [
+         "",
+         "Front Desk19",
+         "Janie Bone",
+         "Unknown",
+         "YL00GYLN",
+         "Lenovo 10TX008XUS",
+         "Out Of Warranty",
+         "",
+         "HP VH2400A",
+         "None",
+         "Network Printer",
+         "Win 11"
+        ],
+        [
+         "",
+         "Desk-hchapman",
+         "Hailey Chapman",
+         "unknown",
+         "YL014Q1H",
+         "Lenovo 11EF004LUS",
+         "Out Of Warranty",
+         "",
+         "HP VH2400A",
+         "None",
+         "Network Printer",
+         "Win 10"
+        ],
+        [
+         "",
+         "Desktop-Heidi",
+         "Heidi Turner(HR DIR)",
+         "unknown",
+         "MJ0GCABR",
+         "Lenovo 11GL002AUS",
+         "Out Of Warranty",
+         "",
+         "Dell C2723H",
+         "None",
+         "Brother MFC-L5850DW",
+         "Win 11 Printer S/N: U64221C8N702416"
+        ],
+        [
+         "",
+         "FoodBev2024",
+         "Chris Howe",
+         "unknown",
+         "MJ0HRV3Q",
+         "Lenovo 11R8001SUS",
+         "Out Of Warranty",
+         "",
+         "Dell P2422H",
+         "None",
+         "HP Officejet Pro 9120e",
+         "Win 10 Printer S/N:TH41CB70G8"
+        ],
+        [
+         "",
+         "Res-Finance",
+         "Claudia Lopez",
+         "unknown",
+         "6JBD704",
+         "Dell Inspiron 3020S",
+         "out Of Warranty",
+         "",
+         "Dell P2422H",
+         "Samsung LS27D36xG",
+         "Network Printer",
+         "Scanner RICOH ScanSnapix2500 (USB), Win11"
+        ],
+        [
+         "",
+         "Cgonzales2019",
+         "Chris Gonzales",
+         "Unknown",
+         "YL00GYF6",
+         "Lenovo 10TX008XUS",
+         "Out Of Warranty",
+         "",
+         "Dell S2421NX",
+         "Dell P2419H",
+         "Network Printer",
+         "Scanner RICOH ScanSnapix 1600 (USB), Win11"
+        ],
+        [
+         "",
+         "Nicole2019",
+         "Nicole Hughes",
+         "Unknown",
+         "YL00GYB6",
+         "Lenovo 10TX008XUS",
+         "Out Of Warranty",
+         "",
+         "Dell P2419H",
+         "Dell E228WFP",
+         "Network Printer",
+         "Win 11"
+        ],
+        [
+         "",
+         "Desktop-MrKelly",
+         "Micheal Kelly",
+         "Unknown",
+         "MJ07NETC",
+         "Lenovo 10UR001JUS",
+         "Out Of Warranty",
+         "",
+         "Dell P2417H",
+         "None",
+         "HP Office Jet Pro 8600",
+         "Win 10"
+        ],
+        [
+         "Proshop",
+         "Pshop02-Noelle",
+         "Noelle Brummett",
+         "unknown",
+         "MJ0G20S9",
+         "Lenovo 11GL002AUS",
+         "Out Of Warranty",
+         "",
+         "HP VH2400A",
+         "none",
+         "Network Printer",
+         "Win 11"
+        ],
+        [
+         "",
+         "Pshop03",
+         "Open",
+         "unknown",
+         "MJ0G309M",
+         "Lenovo 11GL002AUS",
+         "out Of Warranty",
+         "",
+         "HP VH2400A",
+         "None",
+         "Network Printer",
+         "Win 11"
+        ],
+        [
+         "",
+         "Pshop01-Eric",
+         "Eric Bye (Dir Of Golf)",
+         "unknown",
+         "MJ0G20DM",
+         "Lenovo 11GL002AUS",
+         "out Of Warranty",
+         "",
+         "HP VH2400A",
+         "none",
+         "Network Printer",
+         "Win 11"
+        ],
+        [
+         "",
+         "Proshop (Counter)",
+         "Open",
+         "unknown",
+         "G84FX04",
+         "Dell Optiplex 7710",
+         "Out Of Warranty",
+         "",
+         "Dell S2421HS",
+         "None",
+         "HP Laserjet 1022n",
+         "Win 11"
+        ],
+        [
+         "",
+         "Golfshop2020",
+         "POS (NorthStar POS)",
+         "was setup W/O Password",
+         "C19Q001177",
+         "ELO AIUX3",
+         "Out Of Warranty",
+         "",
+         "ELO",
+         "",
+         "Chit Printer",
+         "Win 10"
+        ],
+        [
+         "Fitness Center",
+         "FitnessFront24",
+         "Open to reception",
+         "unknown",
+         "7JBD704",
+         "Dell Insprion 3020S",
+         "Out Of Warranty",
+         "",
+         "HP S2031",
+         "None",
+         "Network Printer",
+         "Win 11"
+        ],
+        [
+         "",
+         "ResFitCheck20",
+         "Fitness checkin",
+         "Unknown",
+         "YLW00696",
+         "Lenovo 11EF004LUS",
+         "Out Of Warranty",
+         "",
+         "Planar PCT 2495",
+         "None",
+         "none",
+         "Win 11, This AIO is used for members to sign into fitness center"
+        ],
+        [
+         "",
+         "Desk-MCarey23",
+         "",
+         "Unknown",
+         "MP29864L",
+         "Lenovo F0GR009US",
+         "Out Of Warranty",
+         "",
+         "Lenovo A570-BA",
+         "None",
+         "Network Printer",
+         "Win 11"
+        ],
+        [
+         "",
+         "ResFitDirector25",
+         "Jennifer Alanis",
+         "Unknown",
+         "9NJ6V94",
+         "Dell Pro Slim QCS1250",
+         "Basic - ends 07/02/2028",
+         "",
+         "HP 24MH",
+         "None",
+         "Network Printer",
+         "Win 11"
+        ],
+        [
+         "Greens Dept",
+         "GCM-Spears2023",
+         "Wallis Spears",
+         "Unknown",
+         "MJ0HRBV8",
+         "Lenovo 11R8001SUS",
+         "Out Of Warranty",
+         "",
+         "Dell P2422H",
+         "None",
+         "Network Printer",
+         "Win 11"
+        ],
+        [
+         "",
+         "GCM-Uribe25",
+         "",
+         "unknown",
+         "6NJ6V94",
+         "Dell Pro Slim QCS1250",
+         "Basic - ends 07/02/2028",
+         "",
+         "Dell S2421NX",
+         "None",
+         "Network Printer",
+         "Win 11"
+        ],
+        [
+         "",
+         "Res-GMC-NF25",
+         "Noe Fuentes",
+         "Unknown",
+         "8NJ6V94",
+         "Dell Pro Slim QCS1250",
+         "Basic - ends 07/02/2028",
+         "",
+         "Dell S2421NX",
+         "None",
+         "Network Printer",
+         "Win 11"
+        ],
+        [
+         "",
+         "Stuessy2021",
+         "Alan Stuessy",
+         "Unknown",
+         "YL014Q1P",
+         "Lenovo 11EF004LUS",
+         "Out Of Warranty",
+         "",
+         "HP VH240A",
+         "None",
+         "Network Printer",
+         "Win 10"
+        ],
+        [
+         "",
+         "Eduardo22",
+         "Eduardo Arriaga",
+         "Unknown",
+         "MJ0G1ZY2",
+         "Lenovo 11GL002AUS",
+         "Out Of Warranty",
+         "",
+         "HP VH240A",
+         "None",
+         "Network Printer",
+         "Win 10"
+        ],
+        [
+         "Lake House",
+         "ELO-Service2-01",
+         "POS (NorthStar POS)",
+         "was setup W/O Password",
+         "G14X000993",
+         "Elo AIO",
+         "Out Of Warranty",
+         "ELO",
+         "None",
+         "None",
+         "Chit Printer",
+         "Win 7"
+        ],
+        [
+         "HOA Office",
+         "Susan W",
+         "Susan Wartelle",
+         "Unknown",
+         "YL014ARDF",
+         "Lenovo 11EF004LUS",
+         "Out Of Warranty",
+         "",
+         "HP VH240A",
+         "None",
+         "Epson ET-2800",
+         "Win 11"
+        ],
+        [
+         "",
+         "Desk2018LoriG",
+         "open",
+         "unknown",
+         "8CC8220TV1",
+         "Lenovo 11EF004LUS",
+         "Out Of Warranty",
+         "",
+         "HP VH240A",
+         "None",
+         "Unknown",
+         "Win 10"
+        ],
+        [
+         "Kitchen",
+         "Chef2021",
+         "Hugh Duffy",
+         "Unknown",
+         "YL014Q37",
+         "Lenovo 11EF004LUS",
+         "Out Of Warranty",
+         "",
+         "hp VH240A",
+         "None",
+         "Epson Work Force WF-4740",
+         ""
+        ],
+        [
+         "",
+         "Laptop-9vf14ed6",
+         "aaron",
+         "Teamwork1",
+         "",
+         "Lenovo yoga",
+         "Out Of Warranty",
+         "",
+         "None",
+         "None",
+         "none",
+         "Win 10"
+        ],
+        [
+         "Point Of Sale",
+         "Elo-Service2-01",
+         "POS (NorthStar POS)",
+         "was setup W/O Password",
+         "G14X000993",
+         "Elo AiO",
+         "out Of Warranty",
+         "ELO",
+         "None",
+         "None",
+         "Chit Printer S/N: MXDF484086",
+         "Win 7"
+        ],
+        [
+         "",
+         "ELO-Service2-02",
+         "POS (NorthStar POS)",
+         "was setup W/O Password",
+         "C19Q001176",
+         "Elo AIO x3",
+         "Out Of Warranty",
+         "Elo",
+         "None",
+         "None",
+         "Chit Printer S/N: MXDF484079",
+         "Win 10"
+        ],
+        [
+         "",
+         "elO-Service1-01",
+         "POS (NorthStar POS)",
+         "was setup W/O Password",
+         "H13X003764",
+         "Elo AIO",
+         "Out Of Warranty",
+         "ELO",
+         "None",
+         "None",
+         "Chit Printer S/N:",
+         "Win 10"
+        ],
+        [
+         "",
+         "ELO-Service1-02",
+         "POS (NorthStar POS)",
+         "was setup W/O Password",
+         "",
+         "Elo AIO",
+         "Out Of Warranty",
+         "ELO",
+         "None",
+         "None",
+         "Chit Printer s/n: MXDF 326583",
+         "Win 7"
+        ]
+       ]
+      },
+      {
+       "type": "sub",
+       "text": "Network Printers"
+      },
+      {
+       "type": "table",
+       "rows": [
+        [
+         "",
+         "Network Name",
+         "IP",
+         "MAC",
+         "Location",
+         "Manufacturer",
+         "Model",
+         "Serial"
+        ],
+        [
+         "Order Printer",
+         "Bix2019supercold5",
+         "192.168.0.37",
+         "00:15:94:C5:E3:89",
+         "Cold Chit Printer",
+         "Bixolon",
+         "SRP-275IIIC",
+         "USA0HKA18100138"
+        ],
+        [
+         "",
+         "Bix2019superhot4",
+         "192.168.0.38",
+         "00:15:94:C5:E3:9B",
+         "Hot Chit Printer",
+         "Bizolon",
+         "SRP-275IIIC",
+         "USA0HKA1810040"
+        ]
+       ]
+      },
+      {
+       "type": "sub",
+       "text": "Network Chit"
+      },
+      {
+       "type": "table",
+       "rows": [
+        [
+         "",
+         "Share Name",
+         "Network Name",
+         "IP",
+         "MAC",
+         "Location",
+         "Manufacturer",
+         "Model",
+         "Serial",
+         "Login"
+        ],
+        [
+         "",
+         "Fitness Receipt",
+         "Printer-B38487",
+         "192.168.0.11",
+         "64-EB-8C-B3-84-87",
+         "Fitness Front desk",
+         "Epson",
+         "M244A",
+         "WJPF003323",
+         "EPSON/EPSON"
+        ],
+        [
+         "",
+         "R-Golf Shop",
+         "Printer-B346CD",
+         "192.168.0.27",
+         "64:EB:8C:B3:46:CD",
+         "Golf Shop POS",
+         "Epson",
+         "M244A",
+         "WJPF002452",
+         "Epson/EPSON"
+        ],
+        [
+         "Shared Office Printers",
+         "",
+         "HP4DA468",
+         "192.168.0.25",
+         "5c-60-ba-4d-a4-6a",
+         "Pro Shop Office",
+         "HP",
+         "Officejet Pro 7740",
+         "CN27V851WR",
+         ""
+        ],
+        [
+         "",
+         "",
+         "",
+         "192.168.0.132",
+         "b4-22-00-08-5d-2e",
+         "Accounting",
+         "Brother",
+         "MFC-L5850DW",
+         "",
+         ""
+        ],
+        [
+         "",
+         "",
+         "",
+         "192.168.0.102",
+         "14-ac-60-ac-5e-00",
+         "Nicoles Office",
+         "Brother",
+         "HL-L2480DW",
+         "U67267-L3N377778",
+         ""
+        ],
+        [
+         "",
+         "",
+         "",
+         "192.168.0.123",
+         "c4-4d-84-2b-28-1c",
+         "Fitness Front desk",
+         "Brother",
+         "MFC-L5850DW",
+         "",
+         ""
+        ],
+        [
+         "",
+         "",
+         "",
+         "192.168.0.170",
+         "dc-cd-2f-42-ce-08",
+         "Fitness OFfice",
+         "Epson",
+         "3850",
+         "",
+         ""
+        ],
+        [
+         "",
+         "",
+         "KM15464A",
+         "192.168.0.18",
+         "d4-f0-c9-15-46-4a",
+         "Admin Office",
+         "Kyocera",
+         "Taskalfa 4054CI",
+         "19Z4922320",
+         "Admin/Admin"
+        ],
+        [
+         "",
+         "",
+         "",
+         "192.168.0.101",
+         "2c-b8-ed-b6-e2-34",
+         "Greens Office",
+         "Brother",
+         "MFC-L5850DW",
+         "",
+         ""
+        ],
+        [
+         "",
+         "",
+         "EPSONE642BE",
+         "192.168.0.19",
+         "",
+         "Hailey's Office",
+         "Epson",
+         "",
+         "",
+         ""
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "type": "photos",
+     "name": "Photos",
+     "count": 1,
+     "chunk": "TRC/p01"
+    }
+   ]
+  },
+  {
+   "type": "folder",
+   "name": "Network",
+   "children": [
+    {
+     "type": "files",
+     "tabs": [
+      {
+       "tab": "Overview",
+       "blocks": [
+        {
+         "type": "p",
+         "text": "RES appears in Unifi under “RES-UDMPro”. Here, network information can be seen, such as APs, network switches, cameras, Cisco phones, etc."
+        },
+        {
+         "type": "p",
+         "text": "Artem – Manages most phone systems"
+        },
+        {
+         "type": "p",
+         "text": "Yuri – Responsible for tech/equipment acquisition and camera installations"
+        },
+        {
+         "type": "p",
+         "text": "Konstantin (K2) – Responsible for most higher-level network functions"
+        },
+        {
+         "type": "p",
+         "text": "[Dashboard | RES-UDMPro](https://unifi.ui.com/consoles/6C63F849B0980000000008FABF600000000009757F2E0000000067FD6265:588170576/network/default/dashboard)"
+        },
+        {
+         "type": "p",
+         "text": "Gateway IP: 192.168.0.101"
+        },
+        {
+         "type": "p",
+         "text": "Provider: Spectrum Business (67.52.166.246) – UDMPro"
+        },
+        {
+         "type": "p",
+         "text": "Domain Name: thereserveclub\\thereserveclub.local"
+        },
+        {
+         "type": "p",
+         "text": "Domain Servers:"
+        },
+        {
+         "type": "p",
+         "text": "Dc2019 – 192.168.0.8"
+        },
+        {
+         "type": "p",
+         "text": "Lccc-host1 – 192.168.1.9, 192.168.1.8 (server is temporary)"
+        },
+        {
+         "type": "p",
+         "text": "Other Servers:"
+        },
+        {
+         "type": "list",
+         "items": [
+          "Northstart22 – 192.168.0.3, 192.168.0.22",
+          "Resfiles – 192.168.0.9",
+          "RES-vhost2025 – 192.168.0.5"
+         ]
+        },
+        {
+         "type": "sub",
+         "text": "VPN Server"
+        },
+        {
+         "type": "p",
+         "text": "Name:"
+        },
+        {
+         "type": "p",
+         "text": "Type:"
+        },
+        {
+         "type": "p",
+         "text": "Subnet:"
+        },
+        {
+         "type": "p",
+         "text": "Server Address:"
+        },
+        {
+         "type": "sub",
+         "text": "Phones"
+        },
+        {
+         "type": "p",
+         "text": "The Reserve Club phones use RingCentral. Send any phone-related inquiries and issues to Artem (or Paul if Artem is away)."
+        },
+        {
+         "type": "sub",
+         "text": "Cameras"
+        },
+        {
+         "type": "p",
+         "text": "Cameras use an external program (ring)"
+        },
+        {
+         "type": "sub",
+         "text": "Cable"
+        },
+        {
+         "type": "p",
+         "text": "TVs in the club are handled by Spectrum, and any issues with their cable/broadcasting are not handled by Club Support."
+        },
+        {
+         "type": "sub",
+         "text": "Wi-Fi Networks"
+        },
+        {
+         "type": "list",
+         "items": [
+          "TRC: Secure network used by all Staff",
+          "TRCG: Open network for guests and members",
+          "TRCAVL: Network for AV system",
+          "Fitness Audio: used for audio",
+          "Reserve Meetings: conference room Wi-Fi"
+         ]
+        },
+        {
+         "type": "sub",
+         "text": "VLANs"
+        },
+        {
+         "type": "p",
+         "text": "VLAN 1 - Main Network - Subnet: 192.168.0.0/23"
+        },
+        {
+         "type": "p",
+         "text": "VLAN 20 - Guest VLAN - Subnet: 10.20.0.0/22"
+        },
+        {
+         "type": "p",
+         "text": "VLAN 30 - AVLVLAN - Subnet: 10.30.0.0/23"
+        },
+        {
+         "type": "p",
+         "text": "VLAN 40 - Fitness Audio - Subnet: 10.40.0.0/23"
+        },
+        {
+         "type": "p",
+         "text": "VLAN 10 - VOIP VLAN – Thid-party gateway"
+        },
+        {
+         "type": "p",
+         "text": "VLAN 50 - Reserve Meetings - Subnet: 10.50.0.0/24"
+        },
+        {
+         "type": "p",
+         "text": "VLAN 100 - Management - Subnet: 10.0.100.0/24"
+        },
+        {
+         "type": "p",
+         "text": "IP addresses - NorthStar – 18.223.49.161, 64.135.45.130. 64.135.61.180, 64.238.201.25, 99.76.173.97, 103.104.193.185"
+        },
+        {
+         "type": "sub",
+         "text": "Server Room Locations"
+        },
+        {
+         "type": "p",
+         "text": "The server room is located in the Club's golf cart parking area. To access it, go through the employee entrance, walk down the stairs, and go through the door across from the hall into the golf space. It’s the last door on the far back right side of the space."
+        }
+       ]
+      },
+      {
+       "tab": "VPN",
+       "blocks": [
+        {
+         "type": "p",
+         "text": "The club currently does not have VPN configured looking to change this in the future."
+        }
+       ]
+      },
+      {
+       "tab": "RDP",
+       "blocks": [
+        {
+         "type": "p",
+         "text": "RDP\n\nThis Club uses a Third-party program called remotePC for all their RDP needs we do not have admin access, and Jeff is the only one that can invite and support the clubs needs."
+        }
+       ]
+      },
+      {
+       "tab": "Current Router + Switches + P2P",
+       "blocks": [
+        {
+         "type": "note",
+         "text": "No entries yet: the source spreadsheet is an empty template."
+        },
+        {
+         "type": "p",
+         "text": "Columns: IP, MAC, Make, Model, Serial, Location, Username (Case Sens.), Password"
+        },
+        {
+         "type": "p",
+         "text": "Sections: Hostname, Router/Firewall, Switches, Point-To-Point"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "folder",
+   "name": "Photos",
+   "children": [
+    {
+     "type": "photos",
+     "name": "Fitness Center",
+     "count": 4,
+     "chunk": "TRC/p02"
+    },
+    {
+     "type": "photos",
+     "name": "Greens Dept",
+     "count": 2,
+     "chunk": "TRC/p03"
+    },
+    {
+     "type": "photos",
+     "name": "Lake House",
+     "count": 2,
+     "chunk": "TRC/p04"
+    },
+    {
+     "type": "photos",
+     "name": "Mail Room",
+     "count": 5,
+     "chunk": "TRC/p05"
+    },
+    {
+     "type": "photos",
+     "name": "Reception",
+     "count": 2,
+     "chunk": "TRC/p06"
+    },
+    {
+     "type": "photos",
+     "name": "Server Room",
+     "count": 4,
+     "chunk": "TRC/p07"
+    }
+   ]
+  }
+ ]
+}

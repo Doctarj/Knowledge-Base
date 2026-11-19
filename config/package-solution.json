@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "kbv-2-client-side-solution",
+    "id": "7ae43e5d-418c-4099-a150-0a6289c8beaf",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.20.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "kbv2  description"
+      },
+      "longDescription": {
+        "default": "kbv2  description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "kbv-2 Feature",
+        "description": "The feature that activates elements of the kbv-2 solution.",
+        "id": "6ac90eee-4bdf-4237-b43f-b119dcb3acd8",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/kbv-2.sppkg"
+  }
+}

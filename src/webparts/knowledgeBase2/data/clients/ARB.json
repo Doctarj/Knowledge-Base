@@ -1,0 +1,1126 @@
+{
+ "name": "The Arbutus Club",
+ "children": [
+  {
+   "type": "folder",
+   "name": "Applications",
+   "children": []
+  },
+  {
+   "type": "folder",
+   "name": "General",
+   "children": [
+    {
+     "type": "folder",
+     "name": "Guides",
+     "children": [
+      {
+       "type": "files",
+       "tabs": [
+        {
+         "tab": "Information",
+         "blocks": [
+          {
+           "type": "p",
+           "text": "2001 Nanton Ave, Vancouver, BC V6J 4A1"
+          },
+          {
+           "type": "p",
+           "text": "Main Desk: [604) 266-7166](https://www.google.com/search?q=arbutus+opening+sports+club+hours&sca_esv=66edcf3fd20f62eb&rlz=1C1GCEA_enCA1209CA1209&sxsrf=APpeQnuuB701z3WQ58CNg3vcsphmN0L_Aw%3A1786646689643&ei=oRB-aoL1JuXtmLQPvMaWwAY&biw=1920&bih=945&ved=0ahUKEwjCyZnKoZ6WAxXlNoYAHTyjBWgQ4dUDCBA&uact=5&oq=arbutus+opening+sports+club+hours&gs_lp=Egxnd3Mtd2l6LXNlcnAiIWFyYnV0dXMgb3BlbmluZyBzcG9ydHMgY2x1YiBob3VyczIKECEYChigARjDBEibGVCpC1jyF3ABeAGQAQCYAewBoAHnEKoBBTAuOC4zuAEDyAEA-AEBmAIDoAL4AsICChAAGEcY1gQYsAPCAg4QABjkAhjWBBiwA9gBAcICFxAuGNwGGLgGGNoGGNgCGMgDGLAD2AEBmAMAiAYBkAYOugYGCAEQARgJkgcDMS4yoAfMMLIHAzAuMrgH7wLCBwUwLjIuMcgHCoAIAQ&sclient=gws-wiz-serp)"
+          },
+          {
+           "type": "p",
+           "text": "Hours:"
+          },
+          {
+           "type": "p",
+           "text": "Weekdays: 5.30am to 11pm"
+          },
+          {
+           "type": "p",
+           "text": "Actual operating hours may vary, call ahead of timeframe"
+          },
+          {
+           "type": "p",
+           "text": "If on-site visits are required, make sure they are schedule on Monday to Thursday only!!!"
+          },
+          {
+           "type": "sub",
+           "text": "Contacts"
+          },
+          {
+           "type": "p",
+           "text": "Mike Hamar (Controller )"
+          },
+          {
+           "type": "p",
+           "text": "MHamar@arbutusclub.com"
+          },
+          {
+           "type": "p",
+           "text": "Selina Ryan (Accounting Manager & IT Liaison)"
+          },
+          {
+           "type": "p",
+           "text": "sryan@arbutusclub.com"
+          },
+          {
+           "type": "p",
+           "text": "Shelly Garland (Director of Operations)"
+          },
+          {
+           "type": "p",
+           "text": "sgarland@arbutusclub.com"
+          },
+          {
+           "type": "p",
+           "text": "Escalation Contacts:"
+          },
+          {
+           "type": "list",
+           "items": [
+            "General ticket escalation: Dan LeClerc/Kanstantstin Famin /Paul Lucas",
+            "Hardware procurement (cameras, equipment, switches, etc.): Yuri Chervinsky / Paul Lucas",
+            "Advanced network functions: Konstantin Kopylov (K2)",
+            "Phone systems: Artem Musalov / Paul Lucas",
+            "Servers: Stanislav Alekseichyk"
+           ]
+          }
+         ]
+        },
+        {
+         "tab": "Network Drives",
+         "blocks": [
+          {
+           "type": "table",
+           "rows": [
+            [
+             "Network Drive",
+             "Group",
+             "Path"
+            ]
+           ]
+          },
+          {
+           "type": "sub",
+           "text": "How to Map Drives to a User’s PC"
+          },
+          {
+           "type": "step",
+           "num": 1,
+           "text": "Add the User to the relevant Group based on the request."
+          },
+          {
+           "type": "step",
+           "num": 2,
+           "text": "If the Drive does not automatically show up, open File Explorer"
+          },
+          {
+           "type": "step",
+           "num": 3,
+           "text": "Right-click “This PC” then “Map Network Drive”"
+          },
+          {
+           "type": "step",
+           "num": 4,
+           "text": "Choose the proper Drive Letter based on the table above, and add the path based on the path listed in the table"
+          },
+          {
+           "type": "step",
+           "num": 5,
+           "text": "Make sure “Reconnect at sign-in” is enabled"
+          }
+         ]
+        },
+        {
+         "tab": "New User setup",
+         "blocks": [
+          {
+           "type": "sub",
+           "text": "Onboarding Process - Active Directory"
+          },
+          {
+           "type": "p",
+           "text": "Have the hiring manager/original ticket creator fill in the New User Request Form."
+          },
+          {
+           "type": "p",
+           "text": "Make sure that the user provides as much detail as possible. This includes any other third-party applications, distribution lists, security groups, etc."
+          },
+          {
+           "type": "p",
+           "text": "Determine if the user is created in Admin 365 or in Active Directory. If the user is created in AD always perform changes on AD even if the same options exist in Admin 365 (example: resetting passwords)."
+          },
+          {
+           "type": "p",
+           "text": "Create the new user in the proper folder (this can either be a general “Users” folder or a folder specifically for their department)."
+          },
+          {
+           "type": "p",
+           "text": "For Arbutus, the name format is:"
+          },
+          {
+           "type": "indent",
+           "text": "[firstletterofname,lastname]@arbutusclub.com\nJohn Doe → jdoe@arbutusclub.com"
+          },
+          {
+           "type": "p",
+           "text": "If applicable, you can use a departing user as a template for the new user (ask the ticket creator beforehand). Add the user’s job title in “Description” if other users in the company have their job title listed as well."
+          },
+          {
+           "type": "p",
+           "text": "When creating a user, make sure to use the @arbutusclub.com email, never .local unless stated otherwise. In “Attributes”, under proxyaddress, add the user’s new email address:"
+          },
+          {
+           "type": "indent",
+           "text": "Example: SMTP:john.doe@arbutusclub.com"
+          },
+          {
+           "type": "p",
+           "text": "Add the new user into the relevant share folders and security groups that the ticket creator did not add in the New User Request Form. Use the DeltaSync file located in the Desktop to push the newly created user."
+          },
+          {
+           "type": "p",
+           "text": "Make sure to use the Secret Sharing system from Club Support when sending passwords!"
+          },
+          {
+           "type": "p",
+           "text": "https://csms.clubsupportinc.com/secrets"
+          },
+          {
+           "type": "sub",
+           "text": "Onboarding Process - Microsoft 365"
+          },
+          {
+           "type": "p",
+           "text": "Log in to Microsoft 365 with the csupport@arbutusclub.com account."
+          },
+          {
+           "type": "p",
+           "text": "Find the newly created user and under Licenses, grant the license (if any) requested by the ticket creator, which should be outlined in the New User Request Form. If a license is required, send an email to “Licenses@clubsupportinc.com” under this format:\n\n Subject: Add (1/2/etc.) license to Arbutus Club."
+          },
+          {
+           "type": "indent",
+           "text": "Body:\n\nLicense is for:\n\nUser Requesting License (username@arbutusclub.com)\nExchange Online/Business Standard Monthly/Yearly Commit\nRequested by:\nManager/Controller\t\tTicket No."
+          },
+          {
+           "type": "p",
+           "text": "Depending on the club, mailbox delegation, distribution lists, and other 365-exclusive groups should also be assigned in Exchange. To do so, go to “Exchange”, then depending on the mailbox, grant the proper permissions. For example, if you want to delegate the shared mailbox “Catering” to the user, go to the catering mailbox, and add the new user under the “Read and Manage” permissions."
+          },
+          {
+           "type": "p",
+           "text": "Outlook usually adds the inbox to the user’s mailbox automatically, but if this doesn’t occur, you can add the mailbox manually in Outlook. To do this, right-click the account name in the left folder pane, select Add shared folder or mailbox, enter the mailbox address."
+          }
+         ]
+        },
+        {
+         "tab": "User disable",
+         "blocks": [
+          {
+           "type": "sub",
+           "text": "Offboarding Process - Active Directory"
+          },
+          {
+           "type": "p",
+           "text": "Club Support Policy dictates that we rarely, if ever delete accounts in systems once created. Permissions and security group memberships in AD are generally left intact."
+          },
+          {
+           "type": "p",
+           "text": "Reset the password to ensure that the user cannot sign-in with their previous credentials. Afterwards, right click the user to be offboarded, and press “Disable” if requested. If any changes are done, make sure to run the DeltaSync script on the desktop."
+          },
+          {
+           "type": "sub",
+           "text": "Offboarding Process - Microsoft 365"
+          },
+          {
+           "type": "p",
+           "text": "The offboarding process differs from club to club, so double check the ticket as the creator will usually include what needs to be taken off and what needs to be retained"
+          },
+          {
+           "type": "p",
+           "text": "Log in to the 365 portal with csupport@arbutusclub.com and find the user to be offboarded. To disallow the user from signing back in, press both “Block Sign-in” and “Sign Out Of All Sessions” to remove the user."
+          },
+          {
+           "type": "p",
+           "text": "To unlicense a user, go to “Licenses” and remove their Microsoft 365 Basic/Standard license to remove their Outlook and Word license. If the license isn’t immediately being transferred to another user, you can remove the license by emailing Licenses@clubsupportinc.com"
+          },
+          {
+           "type": "indent",
+           "text": "Subject: Remove (1/2/etc.) license in Arbutus Club\nBody:\n\nLicense is for:\n\nDeparting User (username@arbutusclub.com)\nExchange Online/Business Standard Monthly/Yearly Commit\nRequested by:\nManager/Controller\t\tTicket No."
+          },
+          {
+           "type": "p",
+           "text": "In Exchange, go to the user to be offboarded, and convert their mailbox into a shared mailbox. If Read Access, Send, or Send As access is requested by the ticket creator, this is also done in Exchange. Email forwarding is also done in Exchange if requested by the ticket creator."
+          }
+         ]
+        },
+        {
+         "tab": "Workstation setup",
+         "blocks": [
+          {
+           "type": "sub",
+           "text": "New PC / Laptop Setup Guide"
+          },
+          {
+           "type": "sub",
+           "text": "STEP 1 – GATHER IMPORTANT INFORMATION"
+          },
+          {
+           "type": "p",
+           "text": "Before replacing the old PC/laptop, collect the following information:"
+          },
+          {
+           "type": "sub",
+           "text": "Required Information"
+          },
+          {
+           "type": "list",
+           "items": [
+            "Check if the user uses:"
+           ]
+          },
+          {
+           "type": "list",
+           "items": [
+            "VPN (if user works remotely)",
+            "Remote Desktop (if user works remotely)",
+            "OneDrive (might require re-login/MFA reset)",
+            "Any non-standard applications"
+           ],
+           "level": 1
+          },
+          {
+           "type": "list",
+           "items": [
+            "Printer information (what printers they have access to)",
+            "Existing PC name",
+            "CMD for: Hostname (existing PC name) and whoami (User login details)",
+            "Ask the user for their password"
+           ]
+          },
+          {
+           "type": "sub",
+           "text": "Backup Important User Data"
+          },
+          {
+           "type": "p",
+           "text": "Export bookmarks and saved passwords and save them temporarily to desktop, documents, or OneDrive. Check if files are in Downloads as well and copy them to desktop/documents/OneDrive as necessary. Desktop/Documents usually do not need manual backup but always verify before assuming data is server-synced."
+          },
+          {
+           "type": "sub",
+           "text": "Check Folder Redirection / Offline Files"
+          },
+          {
+           "type": "p",
+           "text": "Determine whether folders are available offline. If necessary, contact the office to configure offline files properly."
+          },
+          {
+           "type": "sub",
+           "text": "AFTER INFORMATION IS COLLECTED"
+          },
+          {
+           "type": "p",
+           "text": "Once all information and backups are complete, either remove PC from DOMAIN. This way AD stays clean or rename it if PC gets repurposed. Power off the old PC and install/power on the new PC. If replacing a laptop, it may be easier to leave the old one running temporarily for reference."
+          },
+          {
+           "type": "sub",
+           "text": "STEP 2 – ADD PC TO THE DOMAIN"
+          },
+          {
+           "type": "sub",
+           "text": "Login"
+          },
+          {
+           "type": "p",
+           "text": "Login to the domain controller (ARBUTUS10) under your CSI-NAME account. If you require the Csupport credentials, feel free to ask your immediate supervisor/manager."
+          },
+          {
+           "type": "sub",
+           "text": "Renaming the PC and Joining the Domain."
+          },
+          {
+           "type": "p",
+           "text": "Go to This PC -> Properties -> Domain or Workgroup -> Change and enter the domain name. In this case, it is ArbutusClub.local. This will require a restart and the server administrator credentials."
+          },
+          {
+           "type": "p",
+           "text": "The naming convention for Arbutus has been mixed until Club Support has taken over from the previous IT provider. Our own naming convention is as follows:"
+          },
+          {
+           "type": "p",
+           "text": "ARB-[FirstInitial][First3LettersOfLastName]-[MonthYearOfSetUp]"
+          },
+          {
+           "type": "p",
+           "text": "For example, if you set up a workstation for John Doe on July 2026, the device name will be:"
+          },
+          {
+           "type": "indent",
+           "text": "ARB-JDoe-0726"
+          },
+          {
+           "type": "sub",
+           "text": "STEP 3 – ADD PRINTERS"
+          },
+          {
+           "type": "sub",
+           "text": "Method 1 – From Server"
+          },
+          {
+           "type": "p",
+           "text": "Install printers directly from \\\\Arbutus10"
+          },
+          {
+           "type": "sub",
+           "text": "Method 2 – Windows Printer Settings"
+          },
+          {
+           "type": "p",
+           "text": "Navigate to Settings -> Printers and dd printers manually if necessary."
+          },
+          {
+           "type": "p",
+           "text": "Some printers require manufacturer drivers, make sure to print test pages if unsure which printer is correct and to test connections."
+          },
+          {
+           "type": "sub",
+           "text": "STEP 4 – REMOTE DESKTOP / WORK FROM HOME"
+          },
+          {
+           "type": "sub",
+           "text": "Enable RDP"
+          },
+          {
+           "type": "p",
+           "text": "While logged into the CSupport account on the new device, navigate to Remote Desktop settings and enable RDP access. Allow the user's account to remote into the PC and verify that RDP permissions are enabled for their account."
+          },
+          {
+           "type": "p",
+           "text": "To create the shortcut, enter Remote Desktop Connection, input the device IP address (from CMD -> ipconfig) and save the RDP shortcut to the desktop."
+          },
+          {
+           "type": "sub",
+           "text": "VPN Setup"
+          },
+          {
+           "type": "p",
+           "text": "Arbutus uses Unifi Identity Enterprise Client, you will need to install the software from the official Unifi website and then enter the https://arbutusclub.ui.com as the address. You will need to make sure that the user is in the Unifi security group in AD in order for a connection to be successful."
+          },
+          {
+           "type": "sub",
+           "text": "STEP 5 – USER ACCOUNT CONFIGURATION"
+          },
+          {
+           "type": "sub",
+           "text": "Taskbar Cleanup"
+          },
+          {
+           "type": "p",
+           "text": "Change the taskbar settings in Settings -> Personalization -> Taskbar Settings and adjust taskbar preferences, including changing the search icon, removing the weather/current news popup on the left, and aligning the icons to the left or center."
+          },
+          {
+           "type": "p",
+           "text": "Make sure to remove the unnecessary icons such as 365 Copilot and pin the necessary ones, such as Chrome, Adobe, Word, etc."
+          },
+          {
+           "type": "sub",
+           "text": "Set Default Applications"
+          },
+          {
+           "type": "p",
+           "text": "Configure defaults such as Word, Excel, Outlook, etc."
+          },
+          {
+           "type": "sub",
+           "text": "Install Additional Applications"
+          },
+          {
+           "type": "p",
+           "text": "Install any non-standard applications required by the user. Some applications require admin rights. Adobe Creative Cloud should be installed under the CSupport account. Obtain the Northstar POS link (if required)."
+          },
+          {
+           "type": "p",
+           "text": "(Add camera installation)"
+          },
+          {
+           "type": "sub",
+           "text": "Microsoft Account Sign-In"
+          },
+          {
+           "type": "p",
+           "text": "Have the user sign into Microsoft services and complete MFA setup if required ."
+          },
+          {
+           "type": "sub",
+           "text": "Final Data Restore"
+          },
+          {
+           "type": "p",
+           "text": "Re-add printers if needed, restore Downloads folder contents, and import browser bookmarks/passwords into the preferred browser."
+          },
+          {
+           "type": "sub",
+           "text": "Install SentinelOne and TeamViewer"
+          },
+          {
+           "type": "p",
+           "text": "SentinelOne requires an installation package from K2, while Teamviewer can be installed thorugh the Club Support website. Go to the website, then Client Support, then scroll down to install TeamViewer. Make sure to set the password to the standard Club Support password!"
+          },
+          {
+           "type": "sub",
+           "text": "Remove Bloat"
+          },
+          {
+           "type": "p",
+           "text": "Depending on the original model of the new workstation/laptop, there will be most likely be some bloatware left on the device. As the admin account, disable UAC and uninstall unnecessary programs that were left over during the installation."
+          }
+         ]
+        },
+        {
+         "tab": "Proper Server Shutdown and Startup Procedure",
+         "blocks": [
+          {
+           "type": "p",
+           "text": "Consult with Yurii/Stan and any managers before doing any server shutdowns and startups. They are in charge of the regularly scheduled server reboots for most of the clubs. If they are unavailable, contact Kosta as we do not reboot servers without prior consent. If a shutdown is required, here is a general guideline to maintain connectivity:"
+          },
+          {
+           "type": "step",
+           "num": 1,
+           "text": "Notify users and departments of the downtime and provide an accurate timeframe on when services can be fully up and running again."
+          },
+          {
+           "type": "step",
+           "num": 2,
+           "text": "Schedule the downtime after hours (Usually 10:00 PM to 4:00 AM local time) to prevent any issues in the future."
+          },
+          {
+           "type": "step",
+           "num": 3,
+           "text": "Shutdown and/or restart the servers as required and log everything that occurs."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "file",
+     "name": "Printers",
+     "blocks": [
+      {
+       "type": "table",
+       "rows": [
+        [
+         "Make / Model",
+         "IP Address",
+         "PIN",
+         "User",
+         "Password"
+        ],
+        [
+         "Epson",
+         "192.168.3.27",
+         "",
+         "",
+         ""
+        ],
+        [
+         "Epson",
+         "192.168.3.36",
+         "",
+         "",
+         ""
+        ],
+        [
+         "Epson TM-U220",
+         "192.168.3.44",
+         "",
+         "epson",
+         "epson"
+        ],
+        [
+         "Epson UB-E03",
+         "192.168.3.37",
+         "",
+         "",
+         ""
+        ],
+        [
+         "Epson",
+         "192.168.3.41",
+         "",
+         "",
+         ""
+        ],
+        [
+         "Epson UB-E02",
+         "192.168.3.41",
+         "",
+         "",
+         ""
+        ],
+        [
+         "Epson UB-E03",
+         "192.168.3.20",
+         "",
+         "",
+         ""
+        ],
+        [
+         "Epson UB-E02",
+         "192.168.3.32",
+         "",
+         "",
+         ""
+        ],
+        [
+         "Epson UB-E03",
+         "192.168.3.22",
+         "",
+         "",
+         ""
+        ],
+        [
+         "Epson UB-E03",
+         "192.168.3.23",
+         "",
+         "",
+         ""
+        ],
+        [
+         "Epson",
+         "192.168.3.109",
+         "",
+         "",
+         ""
+        ],
+        [
+         "Epson UB-E03",
+         "192.168.3.21",
+         "",
+         "",
+         ""
+        ],
+        [
+         "Epson UB-E03",
+         "192.168.3.29",
+         "",
+         "",
+         ""
+        ],
+        [
+         "Epson UB-E03",
+         "192.168.3.30",
+         "",
+         "",
+         ""
+        ],
+        [
+         "Epson TM-U220",
+         "192.168.3.108",
+         "",
+         "",
+         ""
+        ],
+        [
+         "Xerox",
+         "192.168.3.57",
+         "",
+         "",
+         ""
+        ],
+        [
+         "Xerox",
+         "192.168.3.24",
+         "",
+         "",
+         ""
+        ],
+        [
+         "Xerox",
+         "192.168.3.25",
+         "",
+         "",
+         ""
+        ],
+        [
+         "Xerox",
+         "192.168.3.26",
+         "",
+         "",
+         ""
+        ],
+        [
+         "Xerox",
+         "192.168.3.28",
+         "",
+         "",
+         ""
+        ],
+        [
+         "Xerox",
+         "192.168.3.33",
+         "",
+         "",
+         ""
+        ],
+        [
+         "Xerox",
+         "192.168.3.34",
+         "",
+         "",
+         ""
+        ],
+        [
+         "Xerox",
+         "192.168.3.40",
+         "",
+         "",
+         ""
+        ],
+        [
+         "Xerox",
+         "192.168.3.49",
+         "",
+         "",
+         ""
+        ],
+        [
+         "Xerox",
+         "192.168.3.50",
+         "",
+         "",
+         ""
+        ],
+        [
+         "Xerox VersaLink C405DN MFP",
+         "192.168.3.52",
+         "",
+         "",
+         ""
+        ],
+        [
+         "Xerox",
+         "192.168.3.53",
+         "",
+         "",
+         ""
+        ],
+        [
+         "Xerox",
+         "192.168.3.57",
+         "",
+         "",
+         ""
+        ]
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "folder",
+   "name": "Network",
+   "children": [
+    {
+     "type": "files",
+     "tabs": [
+      {
+       "tab": "Overview",
+       "blocks": [
+        {
+         "type": "p",
+         "text": "Arbutus appears in Unifi under “ARB-UDMPro Max”. Here, network information can be seen, such as APs, network switches, cameras, etc. To access Unifi, ask your manager for the credentials."
+        },
+        {
+         "type": "p",
+         "text": "Yuri/Paul – Responsible for tech/equipment acquisition and camera installations"
+        },
+        {
+         "type": "p",
+         "text": "Konstantin (K2) – Responsible for most higher-level network functions"
+        },
+        {
+         "type": "p",
+         "text": "https://unifi.ui.com/consoles/0CEA145E009D00000000087A5AF80000000008EE0DC500000000672E3508:1489099058/network/default/dashboard"
+        },
+        {
+         "type": "p",
+         "text": "Gateway IP: 192.168.3.254"
+        },
+        {
+         "type": "p",
+         "text": "Provider: Shaw (96.53.49.118) – UDMPro Max"
+        },
+        {
+         "type": "p",
+         "text": "Domain Name: ArbutusClub.local"
+        },
+        {
+         "type": "p",
+         "text": "Domain Servers:"
+        },
+        {
+         "type": "list",
+         "items": [
+          "Arbutus 8 (192.168.3.8)",
+          "Arbutus 9 (192.168.3.9)",
+          "Arbutus 10 (192.168.3.10)"
+         ]
+        },
+        {
+         "type": "p",
+         "text": "Other Servers:"
+        },
+        {
+         "type": "list",
+         "items": [
+          "Dvr Servers:   ARB-DVR2022-01 (192.168.3.15 , 192.168.30.10)"
+         ]
+        },
+        {
+         "type": "indent",
+         "text": "ARB-DVR2022-02 (192.168.3.16 , 192.168.30.100)"
+        },
+        {
+         "type": "list",
+         "items": [
+          "Backup Servers:  ARB-ILO-BACKUP1(192.168.3.231)"
+         ]
+        },
+        {
+         "type": "indent",
+         "text": "ARB-ILO-BACKUP2(192.168.3.232)"
+        },
+        {
+         "type": "list",
+         "items": [
+          "Virtual Host Server:  ARB-VHOST2022 (192.168.3.5 , 10.0.50.10)"
+         ]
+        },
+        {
+         "type": "p",
+         "text": "ARB-ILO-VHOST2022(192.168.3.230)"
+        },
+        {
+         "type": "list",
+         "items": [
+          "Term Server:  TERMINAL2020 (192.168.3.225)",
+          "Camera Server: AVAYA-VM (192.168.3.3)"
+         ]
+        },
+        {
+         "type": "sub",
+         "text": "UNIFI VPN Server"
+        },
+        {
+         "type": "p",
+         "text": "Name: https://arbutusclub.ui.com"
+        },
+        {
+         "type": "p",
+         "text": "Type: UNIFI Identity Enterprise"
+        },
+        {
+         "type": "sub",
+         "text": "Phones"
+        },
+        {
+         "type": "p",
+         "text": "We do not manage phones at Arbutus"
+        },
+        {
+         "type": "sub",
+         "text": "Cameras"
+        },
+        {
+         "type": "p",
+         "text": "Cameras use an external program that will have to be installed when setting up new workstations."
+        },
+        {
+         "type": "sub",
+         "text": "Cable"
+        },
+        {
+         "type": "p",
+         "text": "TVs in the club are handled by Shaw, and any issues with their cable/broadcasting are not handled by Club Support. ( Not 100 percent sure on this ?)"
+        },
+        {
+         "type": "sub",
+         "text": "Wi-Fi Networks"
+        },
+        {
+         "type": "p",
+         "text": "Can’t find in UNIFI ?"
+        },
+        {
+         "type": "sub",
+         "text": "VLANs"
+        },
+        {
+         "type": "p",
+         "text": "VLAN 1 - Main Network - Subnet: 192.168.3.0/24"
+        },
+        {
+         "type": "p",
+         "text": "VLAN 20 - Public Network - Subnet: 192.168.1.0/24"
+        },
+        {
+         "type": "p",
+         "text": "VLAN 10 - Media Network - Subnet: 10.0.0.0/24"
+        },
+        {
+         "type": "p",
+         "text": "VLAN 30 - Cameras - Subnet: 10.1.3.0/24"
+        },
+        {
+         "type": "p",
+         "text": "VLAN 101 - Avaya – Third Party Gateway"
+        },
+        {
+         "type": "p",
+         "text": "VLAN 50 – Bas VLAN- Subnet: 10.0.50.0./24"
+        },
+        {
+         "type": "sub",
+         "text": "Server Room Locations"
+        },
+        {
+         "type": "p",
+         "text": "The main server room is located on the bottom floor beside the bathrooms, you will need to get the keys of the controller of Mike (Controller) to access."
+        }
+       ]
+      },
+      {
+       "tab": "VPN",
+       "blocks": [
+        {
+         "type": "sub",
+         "text": "Setup"
+        },
+        {
+         "type": "step",
+         "num": 1,
+         "text": "User must be the member of VPN Unifi group in Club’s AD."
+        },
+        {
+         "type": "step",
+         "num": 2,
+         "text": "Go to \"Club’s Identity Name” - https://arbutusclub.ui.com ,"
+        },
+        {
+         "type": "p",
+         "text": "and click sign in with Office 365 or Microsoft."
+        },
+        {
+         "type": "image",
+         "b64": "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+A/H7GAIotx1i2HWLYdYth1i2HWLYdYth1i2HWLYdYth1i2HWLYdYth1i2HWLYdYth1i2HWLcdYtx1i3HWLddYt11mru85rbvON4N8k1jWNY1jWNY1jWLyT8k0sPof3XBBBABCiKqrF2Wwj6BeACIY1IWFLzJXAcxlRdYRqRe6MRhjWOaU6HEnR1i2AUD1CoSBFaOagB6oRowuFZnyL3mTuA5jKi6wNIhSJZNzghS4SBoINAtecMxJiMFVQJBAmGCzYQzC8Qwc0OIwCYDWfqgs9CRRi9H7wiTZCQI5P3gRDNpKPQCZ7H3UHJeSChv43AZ5CEpmkErNHCEI2RyLyhAmyEgRyfvCFPhBMYxgQh8wgRdImvIIKnlA5AQGdjASnzSBwTS5wwiQWGeX+xIIIIAAAKeJANBX8ihwSXgtUF6EOIqKKHPPPPPPPPPPPPHSSSSSSSKKKKKKKKKKKKKKKKKKKKKKKKH0HkzIB0dX+hg48OEP5h4ecPzDGH8A4OfzDH8I4B/9oADAMBAAIAAwAAABAADEwQAMMMJDAMwx33331f6nlwBTz/APrIB999sAMMNJBN999999ne+DKcIU88/qtN9999N9999t9999999L++Dt0oU8s/v9/lMMMMMMMMMMMMMMMMM88/8MuI889/9o88888888888888888888888888o979o88888888888888888888888888s/q9o888888888888888888888888880/q9o8888888888kPPPc88888888888V/q9o8888888888V4z++8888888888V/wDwzz/PPPPPPPPPFb+/fvPPPPPPPPPHfvwfv/PPPPPPPPPFfvvvvPPPPPPPPPP/AP4D7/zzzzzzzzzz00033zzzzzzzzzz3+pf7/wA888888222778330/72888888/7C9+/wDPPPPPLLv7L/vL7vDn3PPPPPPM4gccNfPPPPPPPPPPPPPPPPPPPPPPPPAgVbQAfPPPPPPPPPPPPPPPPPPPPPPPPAhffQAfPOPOPPPPPPPPPPPPPPPPPPPPHfffTDfPPzvvPPPPPPPPPPPPPPPPPPPP7VO/PfPKPvvvvvvvvvvvvvvvvvvvPPLCEt/PfPKMssssssssssssssssssvPPPrTt/PPPPPPPPPPPPPPPPPPPPPPPPPPABs/8WPPO90m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",
+         "w": 495,
+         "h": 694
+        },
+        {
+         "type": "step",
+         "num": 3,
+         "text": "Register MFA using Microsoft Authenticator (It asks for Google Authenticator, but Microsoft Authenticator works fine instead of Google, just scan the same QR code but with Microsoft Authenticator)"
+        },
+        {
+         "type": "step",
+         "num": 4,
+         "text": "Register work email as second MFA method (optional)"
+        },
+        {
+         "type": "step",
+         "num": 5,
+         "text": "Download and install Unifi Identity Enterprise (Windows or Mac version). Use of mobile applications is disabled by default."
+        },
+        {
+         "type": "step",
+         "num": 6,
+         "text": "Input \"Club’s Identity Name” when asked and follow the prompts."
+        },
+        {
+         "type": "step",
+         "num": 7,
+         "text": "Once logged in, enable VPN in Identity Enterprise and you will be prompted to authenticate."
+        }
+       ]
+      },
+      {
+       "tab": "RDP",
+       "blocks": [
+        {
+         "type": "note",
+         "text": "ADAPTED FROM WORKSTATION SETUP, DOUBLE CHECK IF THIS WORKSTATION"
+        },
+        {
+         "type": "sub",
+         "text": "Enable RDP"
+        },
+        {
+         "type": "p",
+         "text": "While logged into the CSupport account on the new device, navigate to Remote Desktop settings and enable RDP access. Allow the user's account to remote into the PC and verify that RDP permissions are enabled for their account."
+        },
+        {
+         "type": "p",
+         "text": "To create the shortcut, enter Remote Desktop Connection, input the device IP address (from CMD -> ipconfig) and save the RDP shortcut to the desktop."
+        },
+        {
+         "type": "sub",
+         "text": "VPN Setup"
+        },
+        {
+         "type": "p",
+         "text": "Arbutus uses Unifi Identity Enterprise Client, you will need to install the software from the official Unifi website and then enter the https://arbutusclub.ui.com as the address. You will need to make sure that the user is in the Unifi security group in AD in order for a connection to be successful."
+        },
+        {
+         "type": "sub",
+         "text": "RDP Setup"
+        },
+        {
+         "type": "p",
+         "text": "Make sure you have/check:"
+        },
+        {
+         "type": "list",
+         "items": [
+          "The user's office computer name/terminal server name or IP address (can be found in Atera)",
+          "VPN access (for remote connection only)",
+          "Remote Desktop access enabled on the office computer and user has been added to the list of who can remotely access the PC (Check security groups!)",
+          "Sleep is disabled on the office computer",
+          "The user's username and password."
+         ]
+        },
+        {
+         "type": "p",
+         "text": "RDP Connection:"
+        },
+        {
+         "type": "step",
+         "num": 1,
+         "text": "Confirm the user is connected to the VPN"
+        },
+        {
+         "type": "step",
+         "num": 2,
+         "text": "Verify the office or remote computer is online by pinging its computer name or IP address."
+        },
+        {
+         "type": "step",
+         "num": 3,
+         "text": "Open Remote Desktop Connection on the user’s home computer by pressing Windows Key + R, typing mstsc, and pressing Enter."
+        },
+        {
+         "type": "step",
+         "num": 4,
+         "text": "Enter the office computer name or terminal server name into Remote Desktop Connection."
+        },
+        {
+         "type": "step",
+         "num": 5,
+         "text": "Enter the user’s domain username and password when prompted."
+        },
+        {
+         "type": "step",
+         "num": 6,
+         "text": "Accept the security warning to continue connecting."
+        },
+        {
+         "type": "step",
+         "num": 7,
+         "text": "Once connected, verify the user can access their network drives, applications, cameras, and any other required resources."
+        },
+        {
+         "type": "step",
+         "num": 8,
+         "text": "Create a saved RDP shortcut by opening RDC, entering the server name and your username, clicking Show Options, choosing Save As, saving the .rdp file to your desktop, and later opening that file to launch the connection automatically."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "folder",
+   "name": "Photos",
+   "children": [
+    {
+     "type": "photos",
+     "name": "3rd Floor",
+     "count": 3,
+     "chunk": "ARB/p01"
+    },
+    {
+     "type": "photos",
+     "name": "Billy Mitchell (Dance Studio)",
+     "count": 2,
+     "chunk": "ARB/p02",
+     "note": "Take Photo of closet and hallway to studio"
+    },
+    {
+     "type": "photos",
+     "name": "Boiler Room",
+     "count": 3,
+     "chunk": "ARB/p03"
+    },
+    {
+     "type": "photos",
+     "name": "Chef's Office",
+     "count": 4,
+     "chunk": "ARB/p04"
+    },
+    {
+     "type": "photos",
+     "name": "Pro Shoppe",
+     "count": 5,
+     "chunk": "ARB/p05",
+     "note": "Take photo of outside of change room"
+    },
+    {
+     "type": "folder",
+     "name": "Server Rooms",
+     "children": [
+      {
+       "type": "photos",
+       "name": "General photos",
+       "count": 23,
+       "chunk": "ARB/p09"
+      },
+      {
+       "type": "photos",
+       "name": "Router With Serials",
+       "count": 3,
+       "chunk": "ARB/p06"
+      },
+      {
+       "type": "photos",
+       "name": "Switches with serials - IT office",
+       "count": 1,
+       "chunk": "ARB/p07"
+      },
+      {
+       "type": "photos",
+       "name": "Switches With Serials - Server Room",
+       "count": 12,
+       "chunk": "ARB/p08"
+      }
+     ]
+    },
+    {
+     "type": "photos",
+     "name": "Spa Electrical Room ( I Think)",
+     "count": 4,
+     "chunk": "ARB/p10"
+    },
+    {
+     "type": "photos",
+     "name": "Squash Office (I think)",
+     "count": 2,
+     "chunk": "ARB/p11"
+    }
+   ]
+  }
+ ]
+}

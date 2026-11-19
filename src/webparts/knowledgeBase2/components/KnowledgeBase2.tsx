@@ -103,6 +103,7 @@ const CLIENTS = [
 ];
 
 const SOPS = [
+  {icon:'🛡️',title:'Security-Sensitive Service Requests',time:'~15 min (varies)',official:true,steps:['Covers: password resets, MFA changes/resets, remote access setup (VPN/RDP/remote-support), new accounts or privilege elevation, conditional access/firewall changes, and any request to disclose credentials, codes, or recovery info.','Do NOT perform the action until explicit approval is received directly from the client’s authorized Controller, through a trusted, independently verified channel. Caller identity, urgency, or job title does not replace this.','Watch for red flags: personal cellphone or unknown/blocked number, demands for immediate action, request to skip verification, a reset after losing a phone/MFA device, or a caller asking you to keep the request from the Controller.','Open or update a service ticket first. Record the caller’s claimed name, organization, callback number, affected account/device, requested action, stated reason, and time.','Do not authenticate by caller claims alone — never use a phone number or email the caller supplied during the call.','Independently contact the Controller using their previously verified phone number or established company contact channel — not one given by the caller.','Obtain explicit approval naming the specific request. Prefer written approval attached to the ticket; if given verbally, document the time, number used, and exact authorization.','Perform only the approved action, following least-privilege principles. Never disclose passwords or MFA codes to an unverified caller.','Verify the change with the authorized user through a trusted channel, notify the Controller, and document technician, timestamps, changes made, and approval evidence.','If the request is suspicious or approval cannot be obtained: decline, make no change, and escalate to the Service Manager and Cyber Security Specialist immediately.','If an unauthorized change has already occurred, stop further action and start the incident-response process immediately.']},
   {icon:'🔑',title:'Password Reset',time:'~5 min',steps:['Verify caller identity — ask for employee ID or manager name.','Log into ADUC or Azure AD portal.','Locate the user account and verify it is not locked.','If locked: unlock first, then reset password.','Set temporary password. Check "User must change at next logon".','Communicate password securely — not via plaintext email.','Confirm user can log in.','Document ticket with time, user, and action taken.']},
   {icon:'👤',title:'New User Setup',time:'30–60 min',steps:['Receive new hire details from HR.','Create AD/Azure AD account with standard naming.','Assign to correct security groups and distribution lists.','Provision M365 license and configure mailbox.','Prepare hardware — image, domain join, install software.','Set up MFA.','Hand over hardware and credentials on Day 1.','Walk through first login, password change, MFA enrollment.','Confirm email, drives, and apps are accessible.','Provide IT support contact and ticketing portal link.']},
   {icon:'🚪',title:'User Offboarding',time:'Same day',steps:['Receive termination notice from HR.','Disable (do not delete) AD/Azure AD account immediately.','Revoke all MFA tokens and active sessions.','Forward email to manager. Set out-of-office reply.','Remove from all distribution lists and security groups.','Revoke VPN, RDP, and third-party access.','Recover hardware and wipe/reimage for reuse.','Archive mailbox per retention policy.','Document and close ticket.']},
@@ -115,7 +116,7 @@ const SOPS = [
 
 type Page = 'home'|'clients'|'client-detail'|'client-folder'|'sop'|'sop-detail'|'networks'|'security'|'servers'|'policies'|'tools';
 interface Client {name:string;province:string;code:string;}
-interface Sop {icon:string;title:string;time:string;steps:string[];}
+interface Sop {icon:string;title:string;time:string;steps:string[];official?:boolean;}
 
 const provLabel = (p:string) => p==='Ontario'?'ON':p==='BC'?'BC':p==='AB'?'AB':'US';
 const provColor = (p:string) => p==='Ontario'?C.teal:p==='BC'?C.blue:p==='AB'?C.amber:C.rose;
@@ -590,9 +591,16 @@ const SopDetail: React.FC<{sop:Sop;onBack:()=>void}> = ({sop,onBack}) => (
     <BackBtn label="Back to SOPs" onClick={onBack}/>
     <PageHeader title={`${sop.icon} SOP: ${sop.title}`} subtitle={`Estimated time: ${sop.time}`} extra={
       <div style={{marginTop:'0.5rem'}}>
-        <span style={{display:'inline-flex',alignItems:'center',fontSize:'0.6rem',fontWeight:700,letterSpacing:'0.08em',textTransform:'uppercase',padding:'0.18rem 0.5rem',borderRadius:3,background:'rgba(0,75,68,0.09)',color:C.teal,border:'1px solid rgba(0,75,68,0.18)'}}>Active SOP</span>
+        {sop.official ? (
+          <span style={{display:'inline-flex',alignItems:'center',fontSize:'0.6rem',fontWeight:700,letterSpacing:'0.08em',textTransform:'uppercase',padding:'0.18rem 0.5rem',borderRadius:3,background:'rgba(173,102,94,0.1)',color:C.rose,border:`1px solid ${C.rose}`}}>⚠ Mandatory Company Policy</span>
+        ) : (
+          <span style={{display:'inline-flex',alignItems:'center',fontSize:'0.6rem',fontWeight:700,letterSpacing:'0.08em',textTransform:'uppercase',padding:'0.18rem 0.5rem',borderRadius:3,background:'rgba(0,75,68,0.09)',color:C.teal,border:'1px solid rgba(0,75,68,0.18)'}}>Active SOP</span>
+        )}
       </div>
     }/>
+    {sop.official && (
+      <Callout type="alert">⚠ This is a mandatory, approved company policy — not an internal convention. It must be followed exactly, with no exceptions made on a caller's say-so.</Callout>
+    )}
     <Accordion icon="📋" title="Procedure Steps" defaultOpen>
       <StepList steps={sop.steps}/>
     </Accordion>
@@ -727,8 +735,21 @@ export default class KnowledgeBase extends React.Component<IKnowledgeBaseProps, 
         <BackBtn label="Back to Knowledge Base" onClick={()=>this.nav('home')}/>
         <PageHeader title="Standard Operating Procedures" subtitle="Most common ticket and call handling procedures"/>
         <Callout type="info">📌 Follow each procedure in sequence. Escalate if the issue persists after all steps.</Callout>
+        <SectionHeading text="Company Policy — Mandatory"/>
+        {SOPS.filter(sop=>sop.official).map(sop=>(
+          <div key={sop.title} onClick={()=>this.setState({page:'sop-detail',selectedSop:sop})} style={{background:'rgba(173,102,94,0.06)',border:`1px solid ${C.rose}`,borderRadius:7,padding:'0.85rem 1rem',marginBottom:'0.9rem',display:'flex',alignItems:'center',gap:'0.9rem',cursor:'pointer',transition:'all 0.15s'}}
+            onMouseEnter={e=>{e.currentTarget.style.background='rgba(173,102,94,0.11)';}}
+            onMouseLeave={e=>{e.currentTarget.style.background='rgba(173,102,94,0.06)';}}>
+            <div style={{width:32,height:32,borderRadius:6,display:'flex',alignItems:'center',justifyContent:'center',fontSize:'0.9rem',flexShrink:0,background:'rgba(173,102,94,0.14)'}}>{sop.icon}</div>
+            <div>
+              <div style={{fontSize:'0.82rem',fontWeight:700,color:C.navy}}>{sop.title}</div>
+              <div style={{fontSize:'0.7rem',color:C.rose,marginTop:2,fontWeight:600,textTransform:'uppercase',letterSpacing:'0.05em'}}>⚠ Mandatory — Est. time: {sop.time}</div>
+            </div>
+            <span style={{marginLeft:'auto',color:C.rose}}>→</span>
+          </div>
+        ))}
         <SectionHeading text="Ticket SOPs"/>
-        {SOPS.slice(0,5).map(sop=>(
+        {SOPS.filter(sop=>!sop.official).slice(0,5).map(sop=>(
           <div key={sop.title} onClick={()=>this.setState({page:'sop-detail',selectedSop:sop})} style={{background:C.white,border:`1px solid ${C.border}`,borderRadius:7,padding:'0.85rem 1rem',marginBottom:'0.5rem',display:'flex',alignItems:'center',gap:'0.9rem',cursor:'pointer',transition:'all 0.15s'}}
             onMouseEnter={e=>{e.currentTarget.style.borderColor=C.navy;e.currentTarget.style.background=C.bg;}}
             onMouseLeave={e=>{e.currentTarget.style.borderColor=C.border;e.currentTarget.style.background=C.white;}}>
@@ -738,7 +759,7 @@ export default class KnowledgeBase extends React.Component<IKnowledgeBaseProps, 
           </div>
         ))}
         <SectionHeading text="Call SOPs"/>
-        {SOPS.slice(5).map(sop=>(
+        {SOPS.filter(sop=>!sop.official).slice(5).map(sop=>(
           <div key={sop.title} onClick={()=>this.setState({page:'sop-detail',selectedSop:sop})} style={{background:C.white,border:`1px solid ${C.border}`,borderRadius:7,padding:'0.85rem 1rem',marginBottom:'0.5rem',display:'flex',alignItems:'center',gap:'0.9rem',cursor:'pointer',transition:'all 0.15s'}}
             onMouseEnter={e=>{e.currentTarget.style.borderColor=C.navy;e.currentTarget.style.background=C.bg;}}
             onMouseLeave={e=>{e.currentTarget.style.borderColor=C.border;e.currentTarget.style.background=C.white;}}>
@@ -889,7 +910,7 @@ export default class KnowledgeBase extends React.Component<IKnowledgeBaseProps, 
             <div style={{height:1,background:'rgba(255,255,255,0.07)',margin:'0.7rem 1.2rem'}}/>
             <div>
               <div style={{fontSize:'0.6rem',fontWeight:700,letterSpacing:'0.16em',textTransform:'uppercase',color:'rgba(255,255,255,0.45)',padding:'0 1.2rem 0.3rem'}}>Operations</div>
-              <NavItem icon="📋" label="SOPs"              active={page==='sop'||page==='sop-detail'} badge="8" onClick={()=>this.nav('sop')}/>
+              <NavItem icon="📋" label="SOPs"              active={page==='sop'||page==='sop-detail'} badge="9" onClick={()=>this.nav('sop')}/>
               <NavItem icon="📄" label="Internal Policies" active={page==='policies'} onClick={()=>this.nav('policies')}/>
               <NavItem icon="🔧" label="Tools"             active={page==='tools'}    onClick={()=>this.nav('tools')}/>
             </div>
